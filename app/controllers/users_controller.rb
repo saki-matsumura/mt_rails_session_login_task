@@ -7,6 +7,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       # ユーザ登録に成功した場合の処理
+      log_in(@user)
       redirect_to user_path(@user.id)
     else
       # ユーザ登録に失敗した場合の処理
