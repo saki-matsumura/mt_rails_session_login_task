@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   skip_before_action :login_required, only: [:new, :create]
-  before_action :correct_user, only: [:show]
+  before_action :correct_user, only: [:show, :edit, :update, :destroy]
 
   def new
     @user = User.new
@@ -20,17 +20,25 @@ class UsersController < ApplicationController
     end
   end
 
+  def show
+  end
+
   def edit
   end
 
   def update
-    # 成功した時の処理を入れる
-    flash[:notice] = t('.updated')
+    if @user.update(user_params)
+      flash[:notice] = t('.updated')
+      redirect_to user_path(@user.id)
+    else
+      render :edit
+    end
   end
 
-  def show
-    @user = User.find(params[:id])
-  end
+  def destroy
+    @user.destroy
+    redirect_to new_sessions_path
+  end  
 
   private
   def user_params

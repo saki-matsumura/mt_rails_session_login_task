@@ -1,3 +1,6 @@
 <h1><%= t('.title') %></h1>
 <p><%= t('.name') %>: <%= @user.name %></p>
 <p><%= t('.email') %>: <%= @user.email %></p>
+
+<td><%= link_to t('common.edit'), edit_user_path(@user), id: "edit-user" %></td>
+ | <td><%= link_to t('common.destroy'), @user, method: :delete, data: { confirm: t('common.confirm_destroy') }, id: "destroy-user" %></td>
