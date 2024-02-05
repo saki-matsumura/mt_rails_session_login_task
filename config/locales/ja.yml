@@ -3,7 +3,6 @@ ja:
     models:
       task: タスク
       user: ユーザー
-      # forms/session: セッション
     attributes:
       task:
         title: タイトル
@@ -32,6 +31,14 @@ ja:
     destroy: 削除
     back: 戻る
     confirm_destroy: 本当に削除してもよろしいですか？
+    login_required: ログインしてください
+  nav:
+    tasks-index: タスク一覧
+    new-task: タスクを登録する
+    my-account: アカウント
+    sign-out: ログアウト
+    sign-up: アカウント登録
+    sign-in: ログイン
   tasks:
     index:
       title: タスク一覧ページ
@@ -47,3 +54,16 @@ ja:
       updated: タスクを更新しました
     destroy:
       destroyed: タスクを削除しました
+  users:
+    create:
+      created: アカウントを登録しました
+      failed: メールアドレスまたはパスワードに誤りがあります
+    update:
+      updated: アカウントを更新しました
+  sessions:
+    create:
+      created: ログインしました
+      failed: ログインに失敗しました
+    destroy:
+      destroyed: ログアウトしました
+    

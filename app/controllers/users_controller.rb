@@ -11,11 +11,11 @@ class UsersController < ApplicationController
     if @user.save
       # ユーザ登録に成功した場合の処理
       log_in(@user)
-      flash[:notice] = 'アカウントを登録しました'
+      flash[:notice] = t('.created')
       redirect_to user_path(@user.id)
     else
       # ユーザ登録に失敗した場合の処理
-      flash.now[:notice] = 'メールアドレスまたはパスワードに誤りがあります'
+      flash.now[:notice] = t('.failed')
       render :new
     end
   end
@@ -25,7 +25,7 @@ class UsersController < ApplicationController
 
   def update
     # 成功した時の処理を入れる
-    flash[:notice] = 'アカウントを更新しました'
+    flash[:notice] = t('.updated')
   end
 
   def show

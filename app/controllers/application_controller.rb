@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
 
   def login_required
     unless current_user
-      flash[:notice] = 'ログインしてください'
+      flash[:notice] = t('common.login_required')
       redirect_to new_session_path 
     end
   end
