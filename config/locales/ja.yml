@@ -55,12 +55,23 @@ ja:
     destroy:
       destroyed: タスクを削除しました
   users:
+    new:
+      title: アカウント登録ページ
+    edit:
+      title: アカウント編集ページ
+    show:
+      title: アカウント詳細ページ
+      name: 名前
+      email: メールアドレス
     create:
       created: アカウントを登録しました
       failed: メールアドレスまたはパスワードに誤りがあります
     update:
       updated: アカウントを更新しました
   sessions:
+    new:
+      title: ログインページ
+      sign-in: ログイン
     create:
       created: ログインしました
       failed: ログインに失敗しました
