@@ -65,7 +65,6 @@ ja:
       email: メールアドレス
     create:
       created: アカウントを登録しました
-      failed: メールアドレスまたはパスワードに誤りがあります
     update:
       updated: アカウントを更新しました
   sessions:
@@ -74,7 +73,7 @@ ja:
       sign-in: ログイン
     create:
       created: ログインしました
-      failed: ログインに失敗しました
+      failed: メールアドレスまたはパスワードに誤りがあります
     destroy:
       destroyed: ログアウトしました
     
