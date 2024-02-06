@@ -21,6 +21,10 @@ ja:
       too_short: は6文字以上で入力してください
       confirmation: とパスワードの入力が一致しません
   helpers:
+    label:
+      session:
+        email: メールアドレス
+        password: パスワード
     submit:
       create: 登録する
       update: 更新する
